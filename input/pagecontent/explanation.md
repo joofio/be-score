@@ -60,5 +60,13 @@ From the src, which is the item selected in the first group, we will create thre
 2. status 
 3. value
    
-For code, another function is required (***itemcoding***). For status, it will be defined always as "final" and value is directly inputed by the item.answer.valuedecimal of the item passed to the group (the one with linkid in "findriscscore")
+For code, another function is required (***itemcoding***). For status, it will be defined always as "final" and value is directly imputed by the item.answer.valueDecimal (the parenthesis surrounding it are important) of the item passed to the group (the one with linkid in "findriscscore").
+
+For ***itemcoding***, receives a src and the target will be a CodeableConcept. It creates the coding for the code element of the Observation. Its only purpose is to instantiate the coding element. The rest is handled in the ***codingcode*** group.
+
+The ***codingcode*** group is for creating the elements inside the coding. So it creates Observation.code.coding.code, Observation.code.coding.system and Observation.code.coding.display, similar to ***item*** group.
+
+As for the ***patient*** group, it is for creating the patient reference in the observation resource. Similar to ***itemcoding*** , its usefullness is to create the subject element. Then the rest is handled in the ***patientid*** group.
+
+The ***patientid*** group creates the reference for the subject. The final value creation is made in the ***idvalue*** group, where the reference is created.
 
