@@ -51,11 +51,7 @@
         <title value="MyIG Home Page"/>
         <generation value="html"/>
       </page>
-      <page>
-        <nameUrl value="intro.html"/>
-        <title value="Introduction"/>
-        <generation value="html"/>
-      </page>
+
       <page>
         <nameUrl value="downloads.html"/>
         <title value="Useful Downloads"/>
