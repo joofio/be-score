@@ -1,6 +1,6 @@
 The mapping to be done is explained in the following image:
 
-<img src="mapping.jpeg" width="60%"/>
+<img src="mapping.jpeg" width="100%"/>
 <br>
 
 Which is acomplished with the following code:
