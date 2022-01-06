@@ -62,6 +62,16 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="techguide.html"/>
+        <title value="TechGuide"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="spec.html"/>
+        <title value="Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="downloads.html"/>
         <title value="Useful Downloads"/>
         <generation value="html"/>
