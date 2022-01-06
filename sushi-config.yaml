@@ -17,4 +17,7 @@ releaseLabel: ci-build
 menu:
   Home: index.html
   Artifacts: artifacts.html
-  Introduction: intro.html
+  Tutorial:
+      Introduction: intro.html
+      Discussion: explanation.html
+      Technical Guide: techguide.html
