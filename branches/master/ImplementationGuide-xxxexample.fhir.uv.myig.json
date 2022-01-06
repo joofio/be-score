@@ -11,7 +11,7 @@
   "title": "xxxYour User Friendly Name for MyIG Here",
   "status": "draft",
   "experimental": false,
-  "date": "2022-01-06T08:57:21+00:00",
+  "date": "2022-01-06T09:05:43+00:00",
   "publisher": "xxxYour Work Group",
   "contact": [
     {
@@ -337,6 +337,11 @@
           "nameUrl": "index.html",
           "title": "MyIG Home Page",
           "generation": "html"
+        },
+        {
+          "nameUrl": "intro.md",
+          "title": "Intro",
+          "generation": "markdown"
         },
         {
           "nameUrl": "downloads.html",
