@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="example-observation"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "example-observation" </p></div><p><b>status</b>: final</p><p><b>code</b>: FINDRISC (Finnish Diabetes Risk Score) score <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#763117005)</span></p><p><b>subject</b>: <span></span></p><p><b>value</b>: 0</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="763117005"/>
+      <display value="FINDRISC (Finnish Diabetes Risk Score) score"/>
+    </coding>
+  </code>
+  <subject>
+    <identifier>
+      <value value="0"/>
+    </identifier>
+  </subject>
+  <valueInteger value="0"/>
+</Observation>

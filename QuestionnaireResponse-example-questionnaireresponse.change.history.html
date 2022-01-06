@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<!-- layouts\layout-changehistory.html --><!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE HTML>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>XXXEXAMPLE.FHIR.UV.MYIG\Intro - FHIR v4.0.1</title>
+    <title>XXXEXAMPLE.FHIR.UV.MYIG\ - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:""}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -108,7 +108,7 @@
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Intro</b></li>
+          
           
         </ul>
       </div>    <!-- /container -->
@@ -120,16 +120,9 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<style type="text/css">
-h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
-h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
-h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
-h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
-h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
-</style>
-<div class="col-12">
+
+<div style="counter-reset: section 10" class="col-12">
     <!-- ReleaseHeader --><p id="publish-box">xxxYour User Friendly Name for MyIG Here - Local Development build (v0.1.0-test). See the <a href="xxxhttp://somewhere.org/fhir/uv/myig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
-  <h2>Intro</h2>
   
 
 
@@ -137,216 +130,46 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
 
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="QuestionnaireResponse-example-questionnaireresponse.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="QuestionnaireResponse-example-questionnaireresponse.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="QuestionnaireResponse-example-questionnaireresponse.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="QuestionnaireResponse-example-questionnaireresponse.ttl.html">TTL</a>
+    </li>
+  
 
 
 
-    <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
-</div>
-<p>This IG is intended to help introduce <a href="http://www.hl7.org/fhir/mapping-language.html">FHIR mapping language</a>.
-Even though a <a href="http://www.hl7.org/fhir/mapping-tutorial.html">tutorial</a> is available, some more concrete examples are usefull to fully understand this language.
-The idea is to look at a certain questionnaire and understand how to understand the mapping mechanisms to create the resources from that.
-In short, transform this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Result
-{
-resourceType: "QuestionnaireResponse",
-meta: {
-profile: [
-"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-],
-tag: [
-{
-code: "lformsVersion: 29.3.1"
-}
-]
-},
-status: "completed",
-authored: "2022-01-06T10:58:49.676Z",
-item: [
-{
-linkId: "age",
-text: "Patient Age",
-answer: [
-{
-valueCoding: {
-code: "0-44",
-display: "0 to 44 years old"
-}
-}
-]
-},
-{
-linkId: "bmi",
-text: "Patient BMI",
-answer: [
-{
-valueCoding: {
-code: "0-25",
-display: "0 to 25 km/m2"
-}
-}
-]
-},
-{
-linkId: "waistcircumference",
-text: "Waist circumference",
-answer: [
-{
-valueCoding: {
-code: "0-93",
-display: "Below 93 cm"
-}
-}
-]
-},
-{
-linkId: "physicalActivity",
-text: "Physical Activity?",
-answer: [
-{
-valueCoding: {
-code: "yes",
-display: "Yes"
-}
-}
-]
-},
-{
-linkId: "fruitsvegs",
-text: "Daily consumption of fruits and vegetables?",
-answer: [
-{
-valueCoding: {
-code: "yes",
-display: "more than 5 times a day"
-}
-}
-]
-},
-{
-linkId: "BPmeds",
-text: "History of high Blood pressure meds?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No"
-}
-}
-]
-},
-{
-linkId: "histHyperglicemia",
-text: "History of high blood glucose?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No"
-}
-}
-]
-},
-{
-linkId: "familyHistDiabetes",
-text: "Family history of diabetes?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No family history"
-}
-}
-]
-},
-{
-linkId: "findriscScore",
-text: "Patient FINDRISC total score",
-answer: [
-{
-valueDecimal: 0
-}
-]
-},
-{
-linkId: "resultriskLow",
-text: "10-year diabetes risk: Low",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 100"
-}
-]
-},
-{
-linkId: "resultriskElevated",
-text: "10-year diabetes risk: Slightly Elevated",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 25"
-}
-]
-},
-{
-linkId: "resultriskModerate",
-text: "10-year diabetes risk: Moderate",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 6"
-}
-]
-},
-{
-linkId: "resultriskHight",
-text: "10-year diabetes risk: High",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 3"
-}
-]
-},
-{
-linkId: "resultriskVeryHigh",
-text: "10-year diabetes risk: Very High",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 2"
-}
-]
-}
-],
-questionnaire: http://hl7belgium.org/mapping/Questionnaire/findrisc-questionnaire
-}```
-
-into this
-
-</code></pre></div></div>
-<p>{
-resourceType: “Observation”,
-status: “final”,
-code: {
-coding: [
-{
-system: http://snomed.info/sct,
-code: “763117005”,
-display: “FINDRISC (Finnish Diabetes Risk Score) score”
-}
-]
-},
-subject: {
-identifier: {
-value: “0”
-}
-},
-valueDecimal: 0
-}
-```</p>
+</ul>
 
 
+  <a name="root"> </a>
+  <h2 id="root">: QuestionnaireResponse/example-questionnaireresponse - Change History</h2>
+  <p>History of changes for example-questionnaireresponse .</p>
 
+  
 
 </div>
+
         </div>    <!-- /inner-wrapper -->
       </div>    <!-- /row -->
     </div>    <!-- /container -->
@@ -354,6 +177,29 @@ valueDecimal: 0
 
   <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    try {
+      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+    } catch(exception) {
+    }
+
+    if (!currentTabIndex)
+      currentTabIndex = '0';
+
+    $( '#tabs' ).tabs({
+      active: currentTabIndex,
+      activate: function( event, ui ) {
+        var active = $('.selector').tabs('option', 'active');
+        currentTabIndex = ui.newTab.index();
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+        } catch(exception) {
+        }
+      }
+    });
+  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -367,7 +213,7 @@ valueDecimal: 0
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l310">​</a>
+        <p><a name="l311">​</a>
           IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 11:41+0000">2022-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
