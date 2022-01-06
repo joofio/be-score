@@ -171,35 +171,35 @@ uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as 
 
 
 group QuestionnaireResponse(source src : QuestionnaireResponse, target tgt : Observation) {
-      src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then item(item, scoreresult) "abc";
+      src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then item(item, scoreresult) "Create Score Result";
       
-     src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then patient(item, scoreresult) "abc";
+     src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then patient(item, scoreresult) "Create Reference";
 
 group item(source src, target tgt : Observation) {
-     src -&gt; tgt.code as code then itemcoding(src, code) "x1";
-       src -&gt; tgt.status = 'final' "x2";
-        src -&gt; tgt.value = (src.answer.valueDecimal) "x3";}
+     src -&gt; tgt.code as code then itemcoding(src, code) "Create Code";
+       src -&gt; tgt.status = 'final' "Set Observation Status";
+        src -&gt; tgt.value = (src.answer.valueDecimal) "Set Observation Value";}
         
 group patient(source src, target tgt : Observation) {
-     src -&gt; tgt.subject as patref then patientid(src, patref) "x1a";
+     src -&gt; tgt.subject as patref then patientid(src, patref) "Create Observation subject element";
      }
 
 group patientid(source src, target tgt : Reference) {
-      src -&gt; tgt.identifier as patid then idvalue(src, patid) "xtx";
+      src -&gt; tgt.identifier as patid then idvalue(src, patid) "Create Observation.subject.identifier element";
 }
 
 group idvalue(source src, target tgt : Identifier) {
-      src -&gt; tgt.value = (src.answer.valueDecimal) "qwe";
+      src -&gt; tgt.value = (src.answer.valueDecimal) "add the Patient reference value";
       }
       
 group itemcoding(source src, target tgt : CodeableConcept) {
-  src -&gt; tgt.coding as y then codingcode(src, y) "xx";
+  src -&gt; tgt.coding as y then codingcode(src, y) "Create Observation.code.coding element";
 }
 
 group codingcode(source src, target tgt : Coding) {
-  src -&gt; tgt.code = '763117005' "xy1";
-  src -&gt; tgt.system = 'http://snomed.info/sct' "xy2";
-  src -&gt; tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "xy3";
+  src -&gt; tgt.code = '763117005' "Create code ['hardcoded']";
+  src -&gt; tgt.system = 'http://snomed.info/sct' "add System ['Hardcoded']";
+  src -&gt; tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "Add Display ['hardcoded']";
 }
 
 </code></pre></div></div>
@@ -258,7 +258,7 @@ From the src, which is the item selected in the first group, we will create thre
 
       <div class="inner-wrapper">
         <p><a name="l454">​</a>
-          IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 12:25+0000">2022-01-06</span>
+          IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 14:32+0000">2022-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
