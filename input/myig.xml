@@ -52,8 +52,13 @@
         <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="intro.md"/>
+        <nameUrl value="intro.html"/>
         <title value="Intro"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="explanation.html"/>
+        <title value="Overview"/>
         <generation value="markdown"/>
       </page>
       <page>
