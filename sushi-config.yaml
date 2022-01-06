@@ -18,6 +18,6 @@ menu:
   Home: index.html
   Artifacts: artifacts.html
   Tutorial:
-      Introduction: intro.html
-      Discussion: explanation.html
-      TechGuide: techguide.html
+    Introduction: intro.html
+    Discussion: explanation.html
+    TechGuide: techguide.html
