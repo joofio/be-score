@@ -1,23 +1,51 @@
 ﻿xxxYourComputableMyIGNameHere : Validation Results
 =========================================
 
-err = 4, warn = 1, info = 0
+err = 6, warn = 12, info = 1
 IG Publisher Version: 1.1.93
-Generated Thu Jan 06 09:30:25 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
- Build Errors : 7 / 0 / 0
- /github/workspace/input/myig : 4 / 1 / 1
+Generated Thu Jan 06 11:41:24 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
+ Build Errors : 19 / 2 / 0
+ /github/workspace/fsh-generated/resources/Observation-example-observation : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/QuestionnaireResponse-example-questionnaireresponse : 1 / 9 / 2
+ /github/workspace/input/myig : 3 / 1 / 1
 </table>
 == n/a ==
-ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 171, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource QuestionnaireResponse/example-questionnaireresponse.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/example-questionnaireresponse.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/example-observation.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/example-observation.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /github/workspace/output/Observation-example-observation.change.history.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.html#/html/body/div/div/div/p/a at Line 210, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.json.html#/html/body/div/div/div/p/a at Line 234, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.ttl.html#/html/body/div/div/div/p/a at Line 247, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.xml.html#/html/body/div/div/div/p/a at Line 232, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.change.history.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.json.html#/html/body/div/div/div/p/a at Line 332, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.ttl.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.xml.html#/html/body/div/div/div/p/a at Line 321, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 199, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/p/a at Line 170, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/downloads.html#/html/body/div/div/div/p/a at Line 206, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/explanation.html#/html/body/div/div/div/p/a at Line 247, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 196, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/intro.html#/html/body/div/div/div/p/a at Line 217, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/intro.html#/html/body/div/div/div/p/a at Line 373, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 159, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+== fsh-generated/resources/Observation-example-observation.json ==
+== fsh-generated/resources/QuestionnaireResponse-example-questionnaireresponse.json ==
+ERROR: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7' does not resolve
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[0].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[1].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[2].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[3].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[4].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[5].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[6].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.item[7].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+INFORMATION: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse: No questionnaire is identified, so no validation can be performed against the base questionnaire
+WARNING: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.meta.profile[0]: Profile reference 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == input/myig.xml ==
 ERROR: ImplementationGuide.where(url = 'xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig'): Conformance resource /github/workspace/input/myig.xml - the canonical URL (xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/xxxexample.fhir.uv.myig) does not match the URL (xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig)
 ERROR: ImplementationGuide.url: Resource id/url mismatch: xxxexample.fhir.uv.myig/xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig
 WARNING: ImplementationGuide/xxxexample.fhir.uv.myig: ImplementationGuide: ig-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-ERROR: ImplementationGuide/xxxexample.fhir.uv.myig: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
 ERROR: /github/workspace/input/myig: URL Mismatch xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/xxxexample.fhir.uv.myig vs xxxhttp://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig

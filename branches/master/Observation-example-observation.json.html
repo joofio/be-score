@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>XXXEXAMPLE.FHIR.UV.MYIG\Intro - FHIR v4.0.1</title>
+    <title>XXXEXAMPLE.FHIR.UV.MYIG\ - JSON Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -45,8 +45,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"2"}
-    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <style type="text/css">h2{--heading-prefix:"6.2"}
+    h3,h4,h5,h6{--heading-prefix:"6.2"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
           <!-- Placeholder for child template header declarations -->
@@ -108,7 +108,7 @@
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Intro</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b></b></li>
           
         </ul>
       </div>    <!-- /container -->
@@ -120,229 +120,88 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<style type="text/css">
-h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
-h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
-h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
-h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
-h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
-</style>
-<div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">xxxYour User Friendly Name for MyIG Here - Local Development build (v0.1.0-test). See the <a href="xxxhttp://somewhere.org/fhir/uv/myig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
-  <h2>Intro</h2>
+<div style="counter-reset: section 8" class="col-12">
+  <!-- ReleaseHeader --><p id="publish-box">xxxYour User Friendly Name for MyIG Here - Local Development build (v0.1.0-test). See the <a href="xxxhttp://somewhere.org/fhir/uv/myig/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Observation-example-observation.html">Narrative Content</a>
+  </li>
+
+
+  
+    <li>
+      <a href="Observation-example-observation.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Observation-example-observation.ttl.html">TTL</a>
+    </li>
   
 
 
 
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">:  - JSON Representation</h2>
+
+<p><a href="Observation-example-observation.json" no-download="true">Raw json</a> | <a download="null" href="Observation-example-observation.json">Download</a></p>
+
+    <!-- insert intro if present -->
+  
 
 
 
+  <pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resourceType</a>" : "Observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "example-observation",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"&gt;&lt;p style=\"margin-bottom: 0px\"&gt;Resource \"example-observation\" &lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: FINDRISC (Finnish Diabetes Risk Score) score &lt;span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"&gt; (&lt;a href=\"https://browser.ihtsdotools.org/\"&gt;SNOMED CT&lt;/a&gt;#763117005)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;span&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 0&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "763117005",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "FINDRISC (Finnish Diabetes Risk Score) score"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.identifier">identifier</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "0"
+    }
+  },
+  "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueInteger</a>" : 0
+}</code></pre>
 
 
-
-    <p>  <!-- white space is critical inside of capture --></p>
-<div>
-  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
-</div>
-<p>This IG is intended to help introduce <a href="http://www.hl7.org/fhir/mapping-language.html">FHIR mapping language</a>.
-Even though a <a href="http://www.hl7.org/fhir/mapping-tutorial.html">tutorial</a> is available, some more concrete examples are usefull to fully understand this language.
-The idea is to look at a certain questionnaire and understand how to understand the mapping mechanisms to create the resources from that.
-In short, transform this:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Result
-{
-resourceType: "QuestionnaireResponse",
-meta: {
-profile: [
-"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
-],
-tag: [
-{
-code: "lformsVersion: 29.3.1"
-}
-]
-},
-status: "completed",
-authored: "2022-01-06T10:58:49.676Z",
-item: [
-{
-linkId: "age",
-text: "Patient Age",
-answer: [
-{
-valueCoding: {
-code: "0-44",
-display: "0 to 44 years old"
-}
-}
-]
-},
-{
-linkId: "bmi",
-text: "Patient BMI",
-answer: [
-{
-valueCoding: {
-code: "0-25",
-display: "0 to 25 km/m2"
-}
-}
-]
-},
-{
-linkId: "waistcircumference",
-text: "Waist circumference",
-answer: [
-{
-valueCoding: {
-code: "0-93",
-display: "Below 93 cm"
-}
-}
-]
-},
-{
-linkId: "physicalActivity",
-text: "Physical Activity?",
-answer: [
-{
-valueCoding: {
-code: "yes",
-display: "Yes"
-}
-}
-]
-},
-{
-linkId: "fruitsvegs",
-text: "Daily consumption of fruits and vegetables?",
-answer: [
-{
-valueCoding: {
-code: "yes",
-display: "more than 5 times a day"
-}
-}
-]
-},
-{
-linkId: "BPmeds",
-text: "History of high Blood pressure meds?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No"
-}
-}
-]
-},
-{
-linkId: "histHyperglicemia",
-text: "History of high blood glucose?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No"
-}
-}
-]
-},
-{
-linkId: "familyHistDiabetes",
-text: "Family history of diabetes?",
-answer: [
-{
-valueCoding: {
-code: "no",
-display: "No family history"
-}
-}
-]
-},
-{
-linkId: "findriscScore",
-text: "Patient FINDRISC total score",
-answer: [
-{
-valueDecimal: 0
-}
-]
-},
-{
-linkId: "resultriskLow",
-text: "10-year diabetes risk: Low",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 100"
-}
-]
-},
-{
-linkId: "resultriskElevated",
-text: "10-year diabetes risk: Slightly Elevated",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 25"
-}
-]
-},
-{
-linkId: "resultriskModerate",
-text: "10-year diabetes risk: Moderate",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 6"
-}
-]
-},
-{
-linkId: "resultriskHight",
-text: "10-year diabetes risk: High",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 3"
-}
-]
-},
-{
-linkId: "resultriskVeryHigh",
-text: "10-year diabetes risk: Very High",
-answer: [
-{
-valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 2"
-}
-]
-}
-],
-questionnaire: http://hl7belgium.org/mapping/Questionnaire/findrisc-questionnaire
-}```
-
-into this
-
-</code></pre></div></div>
-<p>{
-resourceType: “Observation”,
-status: “final”,
-code: {
-coding: [
-{
-system: http://snomed.info/sct,
-code: “763117005”,
-display: “FINDRISC (Finnish Diabetes Risk Score) score”
-}
-]
-},
-subject: {
-identifier: {
-value: “0”
-}
-},
-valueDecimal: 0
-}
-```</p>
-
+    <!-- insert notes if present -->
+  
 
 
 
@@ -367,7 +226,7 @@ valueDecimal: 0
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l310">​</a>
+        <p><a name="l376">​</a>
           IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 11:41+0000">2022-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>

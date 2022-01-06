@@ -3,10 +3,10 @@
   "name": "xxxYourComputableMyIGNameHere",
   "package-id": "xxxexample.fhir.uv.myig",
   "ig-ver": "0.1.0-test",
-  "date": "Thu, 06 Jan, 2022 09:30:13 +0000",
-  "errs": 4,
-  "warnings": 1,
-  "hints": 0,
+  "date": "Thu, 06 Jan, 2022 11:41:10 +0000",
+  "errs": 6,
+  "warnings": 12,
+  "hints": 1,
   "version": "4.0.1",
   "tool": "5.0.0-snapshot1 (3)"
 }

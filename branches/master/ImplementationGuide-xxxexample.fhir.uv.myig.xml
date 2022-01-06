@@ -12,7 +12,7 @@
   <title value="xxxYour User Friendly Name for MyIG Here"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <date value="2022-01-06T09:30:13+00:00"/>
+  <date value="2022-01-06T11:41:10+00:00"/>
   <publisher value="xxxYour Work Group"/>
   <contact>
     <telecom>
@@ -207,6 +207,22 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/example-questionnaireresponse"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/example-observation"/>
+      </reference>
+    </resource>
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
