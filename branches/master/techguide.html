@@ -162,6 +162,60 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <p>To implement such a mapping language, please refer to the <a href="https://github.com/hl7-be/matchbox">be-matchbox</a> project or the <a href="https://github.com/ahdis/matchbox">original</a> to start using mapping language in practice.</p>
 
+<p>After having a matchbox (or similar) instance running, first it is needed to create the mapping in the server, by adding a Structure Definition with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl --location --request POST 'http://localhost:8080/matchbox/fhir/StructureMap' \
+--header 'Content-Type: text/fhir-mapping' \
+--header 'Accept: application/fhir+xml;fhirVersion=4.0' \
+--data-raw 'map "http://hl7belgium.org/mapping/StructureMap/extractfindrisc" = "extractfindrisc"
+uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
+uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as target
+
+
+group QuestionnaireResponse(source src : QuestionnaireResponse, target tgt : Observation) {
+      src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then item(item, scoreresult) "abc";
+      
+     src.item as item where linkId.value in ('findriscScore') -&gt; tgt as scoreresult then patient(item, scoreresult) "abc";
+
+group item(source src, target tgt : Observation) {
+     src -&gt; tgt.code as code then itemcoding(src, code) "x1";
+       src -&gt; tgt.status = 'final' "x2";
+        src -&gt; tgt.value = (src.answer.valueDecimal) "x3";}
+        
+group patient(source src, target tgt : Observation) {
+     src -&gt; tgt.subject as patref then patientid(src, patref) "x1a";
+     }
+
+group patientid(source src, target tgt : Reference) {
+      src -&gt; tgt.identifier as patid then idvalue(src, patid) "xtx";
+}
+
+group idvalue(source src, target tgt : Identifier) {
+      src -&gt; tgt.value = (src.answer.valueDecimal) "qwe";
+      }
+      
+group itemcoding(source src, target tgt : CodeableConcept) {
+  src -&gt; tgt.coding as y then codingcode(src, y) "xx";
+}
+
+group codingcode(source src, target tgt : Coding) {
+  src -&gt; tgt.code = '763117005' "xy1";
+  src -&gt; tgt.system = 'http://snomed.info/sct' "xy2";
+  src -&gt; tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "xy3";
+}'
+</code></pre></div></div>
+
+<p>After this, you are ready to send QuestionnaireResponse and receive the associated Observation.</p>
+
+<p>So with:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl --location --request POST 'http://localhost:8080/matchbox/fhir/StructureMap/$transform?source=http://ahdis.ch/matchbox/fml/qr2patgender' \
+--header 'Content-Type: application/fhir+json;fhirVersion=4.0' \
+--header 'Accept: application/fhir+json;fhirVersion=4.0' \
+--data-raw '&lt;QuestionnaireResponse&gt;'
+</code></pre></div></div>
+
+<p>An according Observation will be created.</p>
 
 
 
@@ -186,8 +240,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l330">​</a>
-          IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 12:25+0000">2022-01-06</span>
+        <p><a name="l354">​</a>
+          IG &copy; 2019+ <a style="color:var(--footer-hyperlink-text-color)" href="xxxhttp://hl7.org/Special/committees/[something]">xxxYour Work Group</a>.  Package xxxexample.fhir.uv.myig#0.1.0-test based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Jan 6, 2022 14:32+0000">2022-01-06</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
