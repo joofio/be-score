@@ -1,42 +1,199 @@
 This IG is intended to help introduce [FHIR mapping language](http://www.hl7.org/fhir/mapping-language.html).
 Even though a [tutorial](http://www.hl7.org/fhir/mapping-tutorial.html) is available, some more concrete examples are usefull to fully understand this language.
 The idea is to look at a certain questionnaire and understand how to understand the mapping mechanisms to create the resources from that.
+In short, transform this:
 
-Ideally, the following code will be understood after reading this document:
-```map "http://hl7belgium.org/mapping/StructureMap/extractfindrisc" = "extractfindrisc"
-uses "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse" alias QuestionnaireResponse as source
-uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as target
-
-
-group QuestionnaireResponse(source src : QuestionnaireResponse, target tgt : Observation) {
-      src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then item(item, scoreresult) "abc";
-      
-     src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then patient(item, scoreresult) "abc";
-
-group item(source src, target tgt : Observation) {
-     src -> tgt.code as code then itemcoding(src, code) "x1";
-       src -> tgt.status = 'final' "x2";
-        src -> tgt.value = (src.answer.valueDecimal) "x3";}
-        
-group patient(source src, target tgt : Observation) {
-     src -> tgt.subject as patref then patientid(src, patref) "x1a";
-     }
-
-group patientid(source src, target tgt : Reference) {
-      src -> tgt.identifier as patid then idvalue(src, patid) "xtx";
+```
+Result
+{
+resourceType: "QuestionnaireResponse",
+meta: {
+profile: [
+"http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7"
+],
+tag: [
+{
+code: "lformsVersion: 29.3.1"
 }
-
-group idvalue(source src, target tgt : Identifier) {
-      src -> tgt.value = (src.answer.valueDecimal) "qwe";
-      }
-      
-group itemcoding(source src, target tgt : CodeableConcept) {
-  src -> tgt.coding as y then codingcode(src, y) "xx";
+]
+},
+status: "completed",
+authored: "2022-01-06T10:58:49.676Z",
+item: [
+{
+linkId: "age",
+text: "Patient Age",
+answer: [
+{
+valueCoding: {
+code: "0-44",
+display: "0 to 44 years old"
 }
+}
+]
+},
+{
+linkId: "bmi",
+text: "Patient BMI",
+answer: [
+{
+valueCoding: {
+code: "0-25",
+display: "0 to 25 km/m2"
+}
+}
+]
+},
+{
+linkId: "waistcircumference",
+text: "Waist circumference",
+answer: [
+{
+valueCoding: {
+code: "0-93",
+display: "Below 93 cm"
+}
+}
+]
+},
+{
+linkId: "physicalActivity",
+text: "Physical Activity?",
+answer: [
+{
+valueCoding: {
+code: "yes",
+display: "Yes"
+}
+}
+]
+},
+{
+linkId: "fruitsvegs",
+text: "Daily consumption of fruits and vegetables?",
+answer: [
+{
+valueCoding: {
+code: "yes",
+display: "more than 5 times a day"
+}
+}
+]
+},
+{
+linkId: "BPmeds",
+text: "History of high Blood pressure meds?",
+answer: [
+{
+valueCoding: {
+code: "no",
+display: "No"
+}
+}
+]
+},
+{
+linkId: "histHyperglicemia",
+text: "History of high blood glucose?",
+answer: [
+{
+valueCoding: {
+code: "no",
+display: "No"
+}
+}
+]
+},
+{
+linkId: "familyHistDiabetes",
+text: "Family history of diabetes?",
+answer: [
+{
+valueCoding: {
+code: "no",
+display: "No family history"
+}
+}
+]
+},
+{
+linkId: "findriscScore",
+text: "Patient FINDRISC total score",
+answer: [
+{
+valueDecimal: 0
+}
+]
+},
+{
+linkId: "resultriskLow",
+text: "10-year diabetes risk: Low",
+answer: [
+{
+valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 100"
+}
+]
+},
+{
+linkId: "resultriskElevated",
+text: "10-year diabetes risk: Slightly Elevated",
+answer: [
+{
+valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 25"
+}
+]
+},
+{
+linkId: "resultriskModerate",
+text: "10-year diabetes risk: Moderate",
+answer: [
+{
+valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 6"
+}
+]
+},
+{
+linkId: "resultriskHight",
+text: "10-year diabetes risk: High",
+answer: [
+{
+valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 3"
+}
+]
+},
+{
+linkId: "resultriskVeryHigh",
+text: "10-year diabetes risk: Very High",
+answer: [
+{
+valueString: "The probability of developing type 2 diabetes in 10 years is estimated to be 1 in 2"
+}
+]
+}
+],
+questionnaire: http://hl7belgium.org/mapping/Questionnaire/findrisc-questionnaire
+}```
 
-group codingcode(source src, target tgt : Coding) {
-  src -> tgt.code = '763117005' "xy1";
-  src -> tgt.system = 'http://snomed.info/sct' "xy2";
-  src -> tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "xy3";
+into this
+
+```
+{
+resourceType: "Observation",
+status: "final",
+code: {
+coding: [
+{
+system: http://snomed.info/sct,
+code: "763117005",
+display: "FINDRISC (Finnish Diabetes Risk Score) score"
+}
+]
+},
+subject: {
+identifier: {
+value: "0"
+}
+},
+valueDecimal: 0
 }
 ```
