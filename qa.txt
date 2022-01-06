@@ -3,8 +3,8 @@
 
 err = 6, warn = 12, info = 1
 IG Publisher Version: 1.1.93
-Generated Thu Jan 06 11:41:24 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
- Build Errors : 19 / 2 / 0
+Generated Thu Jan 06 11:44:12 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
+ Build Errors : 36 / 2 / 0
  /github/workspace/fsh-generated/resources/Observation-example-observation : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/QuestionnaireResponse-example-questionnaireresponse : 1 / 9 / 2
  /github/workspace/input/myig : 3 / 1 / 1
@@ -14,23 +14,40 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/example-questionnaireresponse.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Observation/example-observation.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/example-observation.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /github/workspace/output/Observation-example-observation.change.history.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/Observation-example-observation.html#/html/body/div/div/div/p/a at Line 210, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/Observation-example-observation.json.html#/html/body/div/div/div/p/a at Line 234, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/Observation-example-observation.ttl.html#/html/body/div/div/div/p/a at Line 247, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/Observation-example-observation.xml.html#/html/body/div/div/div/p/a at Line 232, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.change.history.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.html#/html/body/div/div/div/p/a at Line 220, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.json.html#/html/body/div/div/div/p/a at Line 332, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.ttl.html#/html/body/div/div/div/p/a at Line 320, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.xml.html#/html/body/div/div/div/p/a at Line 321, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 199, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/p/a at Line 170, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/downloads.html#/html/body/div/div/div/p/a at Line 206, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/explanation.html#/html/body/div/div/div/p/a at Line 247, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 196, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/intro.html#/html/body/div/div/div/p/a at Line 373, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 159, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 114, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.change.history.html#/html/body/div/div/div/p/a at Line 236, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.html#/html/body/div/div/div/p/a at Line 223, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.json.html#/html/body/div/div/div/p/a at Line 247, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.ttl.html#/html/body/div/div/div/p/a at Line 260, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/Observation-example-observation.xml.html#/html/body/div/div/div/p/a at Line 245, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 114, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.change.history.html#/html/body/div/div/div/p/a at Line 236, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.html#/html/body/div/div/div/p/a at Line 233, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.json.html#/html/body/div/div/div/p/a at Line 345, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.ttl.html#/html/body/div/div/div/p/a at Line 333, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 112, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnaireresponse.xml.html#/html/body/div/div/div/p/a at Line 334, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 212, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/changes.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/p/a at Line 183, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/downloads.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/downloads.html#/html/body/div/div/div/p/a at Line 219, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/explanation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/explanation.html#/html/body/div/div/div/p/a at Line 260, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 209, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/intro.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/intro.html#/html/body/div/div/div/p/a at Line 386, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/toc.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 110, column 10: The link 'techguide.html' for "Technical Guide" cannot be resolved
+ERROR: /github/workspace/output/toc.html#/html/body/div/div/div/p/a at Line 172, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 == fsh-generated/resources/Observation-example-observation.json ==
 == fsh-generated/resources/QuestionnaireResponse-example-questionnaireresponse.json ==
 ERROR: QuestionnaireResponse/example-questionnaireresponse: QuestionnaireResponse.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7' does not resolve
