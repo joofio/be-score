@@ -3,7 +3,7 @@
 
 err = 6, warn = 12, info = 1
 IG Publisher Version: 1.1.93
-Generated Thu Jan 06 14:33:11 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
+Generated Thu Jan 06 14:51:56 UTC 2022. FHIR version 4.0.1 for xxxexample.fhir.uv.myig#0.1.0-test (canonical = xxxhttp://somewhere.org/fhir/uv/myig)
  Build Errors : 21 / 2 / 0
  /github/workspace/fsh-generated/resources/Observation-example-observation : 0 / 0 / 1
  /github/workspace/fsh-generated/resources/QuestionnaireResponse-example-questionnaireresponse : 1 / 9 / 2
@@ -27,7 +27,7 @@ ERROR: /github/workspace/output/QuestionnaireResponse-example-questionnairerespo
 ERROR: /github/workspace/output/artifacts.html#/html/body/div/div/div/p/a at Line 215, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/changes.html#/html/body/div/div/div/p/a at Line 186, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/downloads.html#/html/body/div/div/div/p/a at Line 222, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
-ERROR: /github/workspace/output/explanation.html#/html/body/div/div/div/p/a at Line 263, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
+ERROR: /github/workspace/output/explanation.html#/html/body/div/div/div/p/a at Line 264, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/index.html#/html/body/div/div/div/p/a at Line 212, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/intro.html#/html/body/div/div/div/p/a at Line 389, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
 ERROR: /github/workspace/output/spec.html#/html/body/div/div/div/p/a at Line 199, column 28: The link 'xxxhttp://hl7.org/Special/committees/[something]' for "xxxYour Work Group" cannot be resolved
