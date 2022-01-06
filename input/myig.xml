@@ -52,8 +52,8 @@
         <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="intro.html"/>
-        <title value="MyIG Home Page"/>
+        <nameUrl value="intro.md"/>
+        <title value="Intro"/>
         <generation value="markdown"/>
       </page>
       <page>
