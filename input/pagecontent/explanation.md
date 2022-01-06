@@ -1,6 +1,6 @@
 The mapping to be done is explained in the following image:
 
-{% include test.png %}
+<img src="test.png" width="60%"/>
 
 Which is acomplished with the following code:
 ```
