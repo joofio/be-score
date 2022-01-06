@@ -10,35 +10,35 @@ uses "http://hl7.org/fhir/StructureDefinition/Observation" alias Observation as 
 
 
 group QuestionnaireResponse(source src : QuestionnaireResponse, target tgt : Observation) {
-      src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then item(item, scoreresult) "abc";
+      src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then item(item, scoreresult) "Create Score Result";
       
-     src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then patient(item, scoreresult) "abc";
+     src.item as item where linkId.value in ('findriscScore') -> tgt as scoreresult then patient(item, scoreresult) "Create Reference";
 
 group item(source src, target tgt : Observation) {
-     src -> tgt.code as code then itemcoding(src, code) "x1";
-       src -> tgt.status = 'final' "x2";
-        src -> tgt.value = (src.answer.valueDecimal) "x3";}
+     src -> tgt.code as code then itemcoding(src, code) "Create Code";
+       src -> tgt.status = 'final' "Set Observation Status";
+        src -> tgt.value = (src.answer.valueDecimal) "Set Observation Value";}
         
 group patient(source src, target tgt : Observation) {
-     src -> tgt.subject as patref then patientid(src, patref) "x1a";
+     src -> tgt.subject as patref then patientid(src, patref) "Create Observation subject element";
      }
 
 group patientid(source src, target tgt : Reference) {
-      src -> tgt.identifier as patid then idvalue(src, patid) "xtx";
+      src -> tgt.identifier as patid then idvalue(src, patid) "Create Observation.subject.identifier element";
 }
 
 group idvalue(source src, target tgt : Identifier) {
-      src -> tgt.value = (src.answer.valueDecimal) "qwe";
+      src -> tgt.value = (src.answer.valueDecimal) "add the Patient reference value";
       }
       
 group itemcoding(source src, target tgt : CodeableConcept) {
-  src -> tgt.coding as y then codingcode(src, y) "xx";
+  src -> tgt.coding as y then codingcode(src, y) "Create Observation.code.coding element";
 }
 
 group codingcode(source src, target tgt : Coding) {
-  src -> tgt.code = '763117005' "xy1";
-  src -> tgt.system = 'http://snomed.info/sct' "xy2";
-  src -> tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "xy3";
+  src -> tgt.code = '763117005' "Create code ['hardcoded']";
+  src -> tgt.system = 'http://snomed.info/sct' "add System ['Hardcoded']";
+  src -> tgt.display = 'FINDRISC (Finnish Diabetes Risk Score) score' "Add Display ['hardcoded']";
 }
 
 ```
